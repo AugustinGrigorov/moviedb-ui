@@ -1,0 +1,17 @@
+.searchResult{
+  width: 100%;
+  list-style: none;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  box-sizing: border-box;
+}
+
+.searchResult:last-child{
+  border-bottom: 1px solid #aaa;
+}
+
+.searchResult:hover{
+  background: #00b2ff;
+  color: #fff;
+}

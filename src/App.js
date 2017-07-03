@@ -5,7 +5,7 @@ import Search from './componnents/Search';
 class App extends Component {
   render() {
     return (
-      <div className="main_view">
+      <div className="container">
         <Search />
       </div>
     );

@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import './Search.css';
-import searchForMovie from '../util/apiHandler'
+import searchForMovie from '../../util/apiHandler'
+import SearchBar from './SearchBar'
+import SearchResult from './SearchResult'
 
 
 class Search extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      search: '',
       results: []
     };
+
+    this.updateSearch = this.updateSearch.bind(this);
   }
 
   updateSearch = (event) => {
@@ -18,18 +21,15 @@ class Search extends Component {
         results: results
       });
     })
-    this.setState({
-      search: event.target.value
-    });
    }
 
   render() {
     return (
       <div className="search">
-        <input className="searchBar" type="search" name="movie_search" value={this.state.search} onChange={this.updateSearch.bind(this)}/>
+        <SearchBar updateSearch={this.updateSearch} />
         <ul>
-          {this.state.results.map(function(result){
-            return <li key={result.id}>{result.original_title}</li>;
+          {this.state.results.map((result) => {
+            return <SearchResult key={result.id} title={result.original_title} />;
           })}
         </ul>
       </div>
