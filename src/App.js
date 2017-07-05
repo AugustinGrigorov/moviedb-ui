@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import Search from './componnents/Search';
-import DisplayMovie from './componnents/DisplayMovie'
+import Search from './components/Search';
+import DisplayMovie from './components/DisplayMovie'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component {
