@@ -12,4 +12,14 @@ function searchForMovie (name) {
   })
 }
 
-export default searchForMovie
+function getMovieDetails (id) {
+  return axios.get(`https://api.themoviedb.org/3/movie/${id}`, {
+    params: {
+      api_key: config.API_KEY,
+    }
+  }).then((response) => {
+    return response.data
+  })
+}
+
+export { searchForMovie, getMovieDetails }

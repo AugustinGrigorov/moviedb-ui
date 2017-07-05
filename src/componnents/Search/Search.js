@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Search.css';
-import searchForMovie from '../../util/apiHandler'
+import { searchForMovie } from '../../util/apiHandler'
 import SearchBar from './SearchBar'
 import SearchResult from './SearchResult'
 
@@ -23,13 +23,13 @@ class Search extends Component {
     })
    }
 
-  render() {
+  render () {
     return (
       <div className="search">
         <SearchBar updateSearch={this.updateSearch} />
         <ul>
           {this.state.results.map((result) => {
-            return <SearchResult key={result.id} title={result.original_title} />;
+            return <SearchResult key={result.id} id={result.id} title={result.original_title} />;
           })}
         </ul>
       </div>
