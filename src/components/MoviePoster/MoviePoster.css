@@ -3,6 +3,11 @@
   background: #ccc;
 }
 
+.popular .emptyPoster, .popular .poster{
+  height: 210px;
+  width: 140px;
+}
+
 .movieView .emptyPoster, .movieView .poster{
   height: 420px;
   width: 280px;

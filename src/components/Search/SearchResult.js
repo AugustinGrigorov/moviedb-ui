@@ -3,10 +3,10 @@ import './SearchResult.css';
 import { Link } from 'react-router-dom';
 import MoviePoster from '../MoviePoster';
 
-function SearchResult ({ details }) {
+function SearchResult ({ details, closeResults }) {
   return (
     <li className='searchResult'>
-      <Link to= {`/display/${details.id}`}>
+      <Link to= {`/display/${details.id}`} onClick={closeResults}>
         <MoviePoster posterImageUrl={details.poster_path} size='w92' />
         <div className='movieDetails'>
           <h3 className='movieTitle'>{details.title}</h3>

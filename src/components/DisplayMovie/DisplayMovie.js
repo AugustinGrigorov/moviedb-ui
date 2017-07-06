@@ -25,6 +25,15 @@ class DisplayMovie extends Component {
     })
   }
 
+  componentWillReceiveProps (nextProps) {
+    getMovieDetails(nextProps.match.params.id).then((details) => {
+      this.setState({
+        movieDetails: details,
+        movieDetailsLoaded: true
+      });
+    })
+  }
+
   render () {
     return (
       <div>
@@ -41,7 +50,7 @@ function MovieView ({ details }) {
       <div className='genres'>{details.genres.map((genre) => {
         return <p className='genre' key={genre.id}>{genre.name}</p>
       })}</div>
-      <MoviePoster posterImageUrl={details.poster_path} size='w185' />
+      <MoviePoster posterImageUrl={details.poster_path} size='w342' />
       <p className='descripton'>{details.overview}</p>
     </div>
   )

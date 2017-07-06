@@ -3,9 +3,9 @@ import './SearchBar.css';
 
 
 
-function SearchBar (props) {
+function SearchBar ({ updateSearch, handleEscape }) {
   return (
-    <input className='searchBar' type='search' name='movie_search' onChange={props.updateSearch}/>
+    <input className='searchBar' type='search' name='movie_search' placeholder='Search for movies here...' onChange={updateSearch} onKeyPress={handleEscape}/>
   )
 }
 

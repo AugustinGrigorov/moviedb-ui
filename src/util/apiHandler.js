@@ -15,11 +15,22 @@ function searchForMovie (name) {
 function getMovieDetails (id) {
   return axios.get(`https://api.themoviedb.org/3/movie/${id}`, {
     params: {
-      api_key: config.API_KEY,
+      api_key: config.API_KEY
     }
   }).then((response) => {
     return response.data
   })
 }
 
-export { searchForMovie, getMovieDetails }
+function getPopularMovies () {
+  return axios.get(`https://api.themoviedb.org/3/discover/movie`, {
+    params: {
+      api_key: config.API_KEY,
+      sort_by: 'popularity.desc'
+    }
+  }).then((response) => {
+    return response.data.results
+  })
+}
+
+export { searchForMovie, getMovieDetails, getPopularMovies }

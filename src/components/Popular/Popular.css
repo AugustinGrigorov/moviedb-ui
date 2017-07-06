@@ -1,0 +1,6 @@
+.popular{
+  display: grid;
+  grid-template-columns: repeat(5, 140px);
+  grid-gap: 35px;
+  margin-top: 20px;
+}

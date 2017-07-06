@@ -14,23 +14,34 @@ class Search extends Component {
     };
 
     this.updateSearch = this.updateSearch.bind(this);
+    this.closeResults = this.closeResults.bind(this);
   }
 
   updateSearch = (event) => {
-    searchForMovie(event.target.value).then((results) => {
-      this.setState({
-        results: results
-      });
-    })
+    if (event.target.value) {
+      searchForMovie(event.target.value).then((results) => {
+        this.setState({
+          results: results
+        });
+      })
+    } else {
+      this.closeResults()
+    }
+   }
+
+   closeResults = () => {
+     this.setState({
+       results: []
+     });
    }
 
   render () {
     return (
       <div className='search'>
         <SearchBar updateSearch={this.updateSearch} />
-        <ul>
+        <ul className='searchResults'>
           {this.state.results.map((result) => {
-            return <SearchResult key={result.id} details={result} />;
+            return <SearchResult key={result.id} details={result} closeResults={this.closeResults} />;
           })}
         </ul>
       </div>

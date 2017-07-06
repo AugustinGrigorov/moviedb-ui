@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Search from './components/Search';
-import DisplayMovie from './components/DisplayMovie'
+import DisplayMovie from './components/DisplayMovie';
+import Popular from './components/Popular';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component {
@@ -9,7 +10,8 @@ class App extends Component {
     return (
       <Router>
         <div className='container'>
-          <Route exact path='/' component={Search} />
+          <Route path='/' component={Search} />
+          <Route exact path='/' component={Popular} />
           <Route exact path='/display/:id' component={DisplayMovie} />
         </div>
       </Router>

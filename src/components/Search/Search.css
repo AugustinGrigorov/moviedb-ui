@@ -2,8 +2,13 @@
   width: 100%;
   padding: 20px;
   background: #eff0f1;
+  position: relative;
 }
 
-ul{
+.searchResults{
   padding: 0;
+  position: absolute;
+  background: #eff0f1;
+  width: 100%;
+  left: 0;
 }
