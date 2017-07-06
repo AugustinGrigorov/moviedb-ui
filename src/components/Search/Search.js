@@ -4,6 +4,7 @@ import { searchForMovie } from '../../util/apiHandler'
 import SearchBar from './SearchBar'
 import SearchResult from './SearchResult'
 
+//  TODO: Account for if requests come out of order
 
 class Search extends Component {
   constructor(props) {
@@ -29,7 +30,7 @@ class Search extends Component {
         <SearchBar updateSearch={this.updateSearch} />
         <ul>
           {this.state.results.map((result) => {
-            return <SearchResult key={result.id} id={result.id} title={result.original_title} />;
+            return <SearchResult key={result.id} details={result} />;
           })}
         </ul>
       </div>

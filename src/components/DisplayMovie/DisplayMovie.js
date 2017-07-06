@@ -3,6 +3,8 @@ import { getMovieDetails } from '../../util/apiHandler'
 import Spinner from '../Spinner'
 import './DisplayMovie.css';
 
+//  TODO: Display more content
+
 class DisplayMovie extends Component {
   constructor(props) {
     super(props);
