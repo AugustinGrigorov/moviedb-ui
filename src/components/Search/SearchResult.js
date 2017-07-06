@@ -1,28 +1,28 @@
 import React from 'react';
 import './SearchResult.css';
-import { Link } from 'react-router-dom'
-
-//  TODO: Limit descripton characters
-//  TODO: Decouple image logic
+import { Link } from 'react-router-dom';
+import MoviePoster from '../MoviePoster';
 
 function SearchResult ({ details }) {
   return (
     <li className='searchResult'>
       <Link to= {`/display/${details.id}`}>
-        {details.poster_path ? (
-          <img className='searchPoster' src={`http://image.tmdb.org/t/p/w92${details.poster_path}`} alt='movie poster' />
-        ) : (
-          <div className='searchEmptyPoster'>
-            <span className='emptyPosterLabel'>No image</span>
-          </div>
-        )}
+        <MoviePoster posterImageUrl={details.poster_path} size='w92' />
         <div className='movieDetails'>
           <h3 className='movieTitle'>{details.title}</h3>
-          <p className='movieOverview'>{details.overview}</p>
+          <p className='movieOverview'>{shortenText(details.overview)}</p>
         </div>
       </Link>
     </li>
   )
+}
+
+function shortenText (details) {
+  if (details.length < 300) {
+    return details;
+  } else {
+    return details.substring(0, 300) + '...';
+  }
 }
 
 export default SearchResult;

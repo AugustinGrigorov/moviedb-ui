@@ -26,7 +26,7 @@ class Search extends Component {
 
   render () {
     return (
-      <div className="search">
+      <div className='search'>
         <SearchBar updateSearch={this.updateSearch} />
         <ul>
           {this.state.results.map((result) => {

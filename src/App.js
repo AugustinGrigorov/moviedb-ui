@@ -9,8 +9,8 @@ class App extends Component {
     return (
       <Router>
         <div className='container'>
-          <Route exact path="/" component={Search} />
-          <Route exact path="/display/:id" component={DisplayMovie} />
+          <Route exact path='/' component={Search} />
+          <Route exact path='/display/:id' component={DisplayMovie} />
         </div>
       </Router>
     );

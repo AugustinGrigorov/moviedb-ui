@@ -1,20 +1,20 @@
 .title{
   margin-bottom: 5px;
 }
-.poster{
-  display: inline-block;
-  width: 280px;
-}
+
 .descripton{
   display: inline-block;
   width: 500px;
   margin: 0;
   margin-left: 10px;
   vertical-align: top;
+  word-wrap: break-word;
 }
+
 .genres{
   width: 100%;
 }
+
 .genre{
   display: inline-block;
   border: 1px solid #ccc;
