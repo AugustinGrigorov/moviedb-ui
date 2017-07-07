@@ -1,3 +1,9 @@
+.popularMovie{
+  display: inline-grid;
+  width: 140px;
+  margin: 10px;
+}
+
 .popularMovie a{
   text-decoration: none;
   color: #000;

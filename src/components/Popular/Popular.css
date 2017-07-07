@@ -1,6 +1,10 @@
-.popular{
-  display: grid;
-  grid-template-columns: repeat(5, 140px);
-  grid-gap: 35px;
-  margin-top: 20px;
+.popular {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.popular:after {
+  content: "";
+  flex: auto;
 }

@@ -4,18 +4,18 @@
 }
 
 .popular .emptyPoster, .popular .poster{
-  height: 210px;
-  width: 140px;
+  max-height: 210px;
+  max-width: 140px;
 }
 
 .movieView .emptyPoster, .movieView .poster{
-  height: 420px;
-  width: 280px;
+  max-height: 420px;
+  max-width: 280px;
 }
 
 .search .emptyPoster, .search .poster{
-  height: 100px;
-  width: 66px;
+  max-height: 100px;
+  max-width: 66px;
 }
 
 .emptyPosterLabel{
@@ -28,4 +28,14 @@
   font-weight: bold;
   top: 50%;
   transform: translateY(-50%);
+}
+
+@media (max-width: 650px) {
+  .search .emptyPoster, .search .poster{
+    display: none;
+  }
+  .movieView .emptyPoster, .movieView .poster{
+    display: block;
+    margin: auto;
+  }
 }

@@ -26,7 +26,7 @@
 .movieDetails{
   vertical-align: top;
   display: inline-block;
-  width: 700px;
+  width: calc(100% - 80px);
   margin-left: 10px;
   word-wrap: break-word;
 }

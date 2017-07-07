@@ -3,6 +3,7 @@
   padding: 20px;
   background: #eff0f1;
   position: relative;
+  box-sizing: border-box;
 }
 
 .searchResults{

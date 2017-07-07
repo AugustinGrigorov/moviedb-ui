@@ -5,6 +5,8 @@ import DisplayMovie from './components/DisplayMovie';
 import Popular from './components/Popular';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
+// TODO: Fix tests
+
 class App extends Component {
   render() {
     return (
