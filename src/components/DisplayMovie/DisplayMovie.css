@@ -5,6 +5,8 @@
 
 .title{
   margin-bottom: 5px;
+  width: 100%;
+  word-wrap: break-word;
 }
 
 .descripton{

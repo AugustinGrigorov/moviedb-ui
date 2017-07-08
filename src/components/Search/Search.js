@@ -4,8 +4,6 @@ import { searchForMovie } from '../../util/apiHandler'
 import SearchBar from './SearchBar'
 import SearchResult from './SearchResult'
 
-//  TODO: Account for if requests come out of order
-
 class Search extends Component {
   constructor(props) {
     super(props);
@@ -18,16 +16,12 @@ class Search extends Component {
   }
 
   updateSearch = (event) => {
-    if (event.target.value) {
-      searchForMovie(event.target.value).then((results) => {
-        this.setState({
-          results: results
-        });
-      })
-    } else {
-      this.closeResults()
-    }
-   }
+    searchForMovie(event.target.value).then((results) => {
+      this.setState({
+        results: results
+      });
+    })
+  }
 
    closeResults = () => {
      this.setState({

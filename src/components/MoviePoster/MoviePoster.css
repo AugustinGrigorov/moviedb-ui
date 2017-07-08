@@ -4,18 +4,18 @@
 }
 
 .popular .emptyPoster, .popular .poster{
-  max-height: 210px;
-  max-width: 140px;
+  height: 210px;
+  width: 140px;
 }
 
 .movieView .emptyPoster, .movieView .poster{
-  max-height: 420px;
-  max-width: 280px;
+  height: 420px;
+  width: 280px;
 }
 
 .search .emptyPoster, .search .poster{
-  max-height: 100px;
-  max-width: 66px;
+  height: 100px;
+  width: 66px;
 }
 
 .emptyPosterLabel{
@@ -37,5 +37,21 @@
   .movieView .emptyPoster, .movieView .poster{
     display: block;
     margin: auto;
+  }
+}
+
+@media (max-width: 280px) {
+  .movieView .emptyPoster{
+    position: relative;
+    height: 0;
+    width: 100%;
+    padding-bottom: 150%;
+  }
+  .movieView .poster{
+    width: 100%;
+    height: auto;
+  }
+  .emptyPosterLabel{
+    position: absolute;
   }
 }
