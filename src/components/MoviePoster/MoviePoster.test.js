@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MoviePoster from './MoviePoster';
 import { mount } from 'enzyme';
+import MoviePoster from './MoviePoster';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
@@ -10,7 +10,7 @@ it('renders without crashing', () => {
 
 it('it should display immage when given one', () => {
   const poster = mount(
-    <MoviePoster posterImageUrl='abcd' size='w342' />
+    <MoviePoster posterImageUrl="abcd" size="w342" />
   );
   const image = poster.find('.poster');
   expect(image.exists()).toBe(true);

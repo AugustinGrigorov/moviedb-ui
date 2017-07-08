@@ -365,7 +365,7 @@ const movieList = [{
     "overview": "Becker's documentary presents the arguments of the new-age practice of \"bio-energetic medicine.\"  Presented as a medical documentary, The Living Matrix, promotes healing through energy reading and manipulation.  Director Greg Becker presents his arguments through anecdotal patient stories, and interviews with parapsychology professionals.",
     "release_date": "2009-10-22"
   }
-]
+];
 
 const movieDetails = {
   "adult": false,
@@ -431,29 +431,29 @@ const movieDetails = {
   "video": false,
   "vote_average": 8.199999999999999,
   "vote_count": 8269
-}
+};
 
 
 function searchForMovie() {
   return new Promise(function(resolve, reject) {
-    resolve(movieList)
+    resolve(movieList);
   });
 }
 
 function getMovieDetails() {
   return new Promise(function(resolve, reject) {
-    resolve(movieDetails)
+    resolve(movieDetails);
   });
 }
 
 function getPopularMovies() {
   return new Promise(function(resolve, reject) {
-    resolve(movieList)
+    resolve(movieList);
   });
 }
 
 export {
   searchForMovie,
   getMovieDetails,
-  getPopularMovies
-}
+  getPopularMovies,
+};

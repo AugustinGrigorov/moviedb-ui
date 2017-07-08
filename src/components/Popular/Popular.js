@@ -1,27 +1,27 @@
 import React, { Component } from 'react';
 import './Popular.css';
-import PopularMovie from './PopularMovie'
-import { getPopularMovies } from '../../util/apiHandler'
+import PopularMovie from './PopularMovie';
+import { getPopularMovies } from '../../util/apiHandler';
 
 class Popular extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      popularMovies: []
+      popularMovies: [],
     };
   }
 
-  componentDidMount () {
+  componentDidMount() {
     getPopularMovies().then((popularMovies) => {
       this.setState({
-        popularMovies
+        popularMovies,
       });
-    })
+    });
   }
 
-  render () {
+  render() {
     return (
-      <div className='popular'>
+      <div className="popular">
         {this.state.popularMovies.map((result) => {
           return <PopularMovie key={result.id} details={result} />;
         })}

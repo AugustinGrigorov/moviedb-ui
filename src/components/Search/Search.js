@@ -18,22 +18,22 @@ class Search extends Component {
   updateSearch = (event) => {
     searchForMovie(event.target.value).then((results) => {
       this.setState({
-        results: results
+        results: results,
       });
-    })
+    });
   }
 
    closeResults = () => {
      this.setState({
-       results: []
+       results: [],
      });
    }
 
-  render () {
+  render() {
     return (
-      <div className='search'>
+      <div className="search">
         <SearchBar updateSearch={this.updateSearch} />
-        <ul className='searchResults'>
+        <ul className="searchResults">
           {this.state.results.map((result) => {
             return <SearchResult key={result.id} details={result} closeResults={this.closeResults} />;
           })}
