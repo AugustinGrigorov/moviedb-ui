@@ -11,3 +11,6 @@ To set up:
 - Do `npm install`
 - Run `npm start`
 - App should be running on localhost
+
+To test:
+- Run `npm test`
