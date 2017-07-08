@@ -1,20 +1,18 @@
 import React from 'react';
 import './SearchResult.css';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import MoviePoster from '../MoviePoster';
 
 function SearchResult ({ details, closeResults }) {
   return (
     <li className='searchResult'>
-      <Router>
-        <Link to= {`/display/${details.id}`} onClick={closeResults}>
-          <MoviePoster posterImageUrl={details.poster_path} size='w92' />
-          <div className='movieDetails'>
-            <h3 className='movieTitle'>{details.title}</h3>
-            <p className='movieOverview'>{shortenText(details.overview)}</p>
-          </div>
-        </Link>
-      </Router>
+      <Link to= {`/display/${details.id}`} onClick={closeResults}>
+        <MoviePoster posterImageUrl={details.poster_path} size='w92' />
+        <div className='movieDetails'>
+          <h3 className='movieTitle'>{details.title}</h3>
+          <p className='movieOverview'>{shortenText(details.overview)}</p>
+        </div>
+      </Link>
     </li>
   )
 }
