@@ -4,9 +4,6 @@ import Spinner from '../Spinner'
 import MoviePoster from '../MoviePoster';
 import './DisplayMovie.css';
 
-
-//  TODO: Display more content
-
 class DisplayMovie extends Component {
   constructor(props) {
     super(props);

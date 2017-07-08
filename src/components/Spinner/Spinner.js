@@ -3,7 +3,7 @@ import './Spinner.css';
 
 function Spinner () {
   return (
-    <div className='box'>
+    <div className='spinner'>
       <img alt='Loading spinner' src='/loading.gif' />
     </div>
   )
